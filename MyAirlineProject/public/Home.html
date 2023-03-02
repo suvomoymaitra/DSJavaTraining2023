@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Welcome to my Airline</title>
+	</head>
+<body>
+	<h1>Welcome to my Airline</h1>
+	<hr>
+	
+	<a href = "Register.html">Sign-Up</a> <a href = "Login.html">Sign-In</a>
+	
+	<h2>Search Flights</h2>
+	
+	<form action="AvailableFlights.html">
+	<table border = 5 cellspacing=10 cellpadding=10>
+		<tr>
+			<td>Enter source city</td>
+			<td>
+				<input list="source">
+				
+				<datalist id="source">
+			    	<option value="Delhi">
+				    <option value="Mumbai"> 
+			    	<option value="Kolkata">
+				    <option value="Bengaluru">
+			    	<option value="Chennai">
+				</datalist>
+			</td>
+		</tr>
+		<tr>
+			<tr>
+			<td>Enter destination city</td>
+			<td>
+				<input list="source">
+				<datalist id="source">
+			    	<option value="Delhi">
+				    <option value="Mumbai"> 
+			    	<option value="Kolkata">
+				    <option value="Bengaluru">
+			    	<option value="Chennai">
+				</datalist>
+			</td>
+		</tr>
+		<tr>
+			<tr>
+			<td>Enter journey date</td>
+			<td><input type=date></td>
+		</tr>
+	</table>
+	<br>
+	
+	<input type="submit"  value = "Book ticket" style = "color : white; background-color:green;height : 60px; width : 80px;">
+		
+	</form>
+	
+	
+</body>
+</html>
