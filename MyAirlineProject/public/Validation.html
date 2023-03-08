@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>My page</title>
+    
+    <script>
+		
+		
+		
+		
+		document.writeln('start');
+		
+		document.writeln('<table border=3 cellspacing = 5 cellpadding = 5>')
+		
+		let val = 0;
+		
+	//	for( r = 0;r<=255;r++){
+			for(let g = 0;g<=255;g++){
+				for(let b=0;b<=255;b++){
+					
+					
+					document.writeln('<tr>')
+					document.writeln('<td> <div style="background-color:rgb('+255+','+g+','+b+')"> Some text </div></td>');
+					document.writeln('</tr>')
+					
+				}
+			}
+		//}
+		document.writeln('</table>')
+		
+		document.writeln('end')
+		
+		let greetings = 'Hello welcome to JS';
+		
+		let message = greetings;
+		
+		let $ = 3;
+		let _ = 5;
+		
+		alert($ + _);
+		
+		message = {
+				"height" : 34,
+				"widht" : 30
+		};
+		
+		alert(message.height);
+		
+		
+		const PI = 3.1416;
+		
+		let radius = 45;
+		
+		let area = PI*radius*radius;
+		
+		
+		console.log('The area of the cicrle is : ' + area);
+		
+		let a = 34;
+		console.log(a);
+		console.log('First Script : Value of a : ' + a);
+		
+		a = add10(a);
+		
+		console.log('First Script : Value of a : ' + a);
+		
+		function add10(val){
+			console.log('Adding 10 to ' + val);
+			val += 10;
+			console.log('New value : ' + val);
+			return val;
+		}
+		
+		console.log('Second Script : Value of a : ' + a);
+		
+		a = add10(a);
+		
+		console.log('Second Script : Value of a : ' + a);
+		
+		let temp = Infinity;
+		console.log(temp);
+		
+		temp = Math.min(temp,68);
+		
+		
+		console.log(temp);
+		
+		let maxVal1 = 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999n;
+		let maxVal2 = 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999n;
+		
+		console.log(maxVal1 + maxVal2);
+		
+		console.log('message'/2);
+		
+		let str = 'Hello';
+		let name = prompt('Enter you name : ');
+		name = name.toUpperCase();
+		let greeting = `${str}! ${name}.`
+		
+		console.log(greeting);
+		
+		
+		let user = prompt('Enter your name : ');
+		
+		if(user === 'Employee') msg = 'Hello';
+		else if(user === 'Director') msg = 'Greetings'
+		else if(user === '') msg = ''
+		else msg = `Who are you ${user}?`;
+		
+		console.log(msg);
+		
+		
+		let start = 0;
+		
+		while(start<5){
+			console.log('Printing from the while loop;')
+			start++;
+		}
+		
+		start = 0;
+		
+		do{
+			console.log('Printing from the do-while loop;')
+			start++;
+		}while(start<5)
+			
+		for(start = 0;start<5;start++){
+			console.log('Printing from the for loop;')
+		}
+		
+		let userBrowser = prompt('Enter your browser name');
+		switch(userBrowser){
+		case 'Chrome' : 
+			console.log('You are running it on chrome')
+			break;
+		case 'Edge':
+		case 'Opera':
+		case 'Safari':
+			console.log('The web page looks ok')
+			break;
+		default:
+			console.log('The web page may or may not work');
+				
+		
+		}
+		
+		function greet(name,message){
+			name = '*' + name + '*';
+			console.log(name + " : " + message)
+		}
+		
+		
+		function greet(name,message = "no message passed"){
+			name = '*' + name + '*';
+			console.log(name + " : " + message)
+		}
+		
+		greet("Suvo","Greetings");
+		greet("Suvo");
+		
+		function getARandomNum(){
+			return Math.round((Math.random()*100));
+		}
+		
+		console.log("Random number generarted : " + getARandomNum());
+		
+		function isPrime(num){
+			for(let i=2;i<=Math.sqrt(num);i++){
+				if(num%i==0) return false;
+			}
+			return true;
+		}
+		
+		function showPrimes(n){
+			for(let i=2;i<=n;i++){
+				if(isPrime(i)){
+					console.log(i);
+				}
+			}
+		}
+		
+		showPrimes(34);
+		
+		let sum = function(a,b){
+			return a+b;
+		};
+		
+		let avg = (a,b,c,d) => (a+b+c+d)/4;
+		
+		
+		console.log(sum);
+		console.log(avg);
+		
+		console.log(sum(23,34));
+		console.log(avg(78,67,44,34));
+		
+		
+		function showDialog(question,ok,cancel,error){
+			try{
+				if(confirm(question)){
+					ok();
+				}
+				else{
+					cancel();
+				}
+			}catch(err){
+				error(err);
+			}
+		}
+		
+		showDialog("Do you want to save it?",()=>{
+			console.log("Yes I want to save!")
+		},()=>{
+			console.log("No I dont want to save!");
+		},(err)=>{
+			console.log(err);
+		});
+		
+		
+		let bankAccountObjArr = [
+			{
+				"accountNumber" : 1234,
+				"accountHolder" : "Suvo",
+				"accountBalance" : 5000,
+				"openingDate" : new Date("25 Mar 2020"),
+				"homeAddress" : {
+					"area" : "West Avenue",
+					"street" : "10th main road",
+					"city" : "Bangalore",
+					"state" : "Karnataka",
+					"country" : "India",
+					"pin" : "560011"
+				}
+			},
+			{
+				"accountNumber" : 1000,
+				"accountHolder" : "Leanne Graham",
+				"accountBalance" : 4000,
+				"openingDate" : new Date("31 Aug 2009"),
+				"homeAddress" : {
+					"area" : "East Avenue",
+					"street" : "12th main road",
+					"city" : "Bangalore",
+					"state" : "Karnataka",
+					"country" : "India",
+					"pin" : "560077"
+				}
+			},
+			{
+				"accountNumber" : 2000,
+				"accountHolder" : "Ervin Howell",
+				"accountBalance" : 6000,
+				"openingDate" : new Date("08 Jan 2021"),
+				"homeAddress" : {
+					"area" : "Park street",
+					"street" : "10th main road",
+					"city" : "Kolkata",
+					"state" : "West Bengal",
+					"country" : "India",
+					"pin" : "700025"
+				}
+			}
+			
+		]
+		
+		
+		// html part
+		
+		document.writeln('<table border=5 cellspacing=10 cellpading=10>');
+		
+		// start of table heading
+		
+		document.writeln('<tr>');
+		
+		document.writeln('<th>Account Number</th>');
+		document.writeln('<th>Account Holder</th>');
+		document.writeln('<th>Account Balance</th>');
+		document.writeln('<th>Account Opening Date</th>');
+		document.writeln('<th>Home address</th>');
+		
+		document.writeln('</tr>');
+		
+		// end of table heading
+		
+		for(let i=0;i<3;i++){
+		
+			// start of first row
+			
+			document.writeln('<tr>');
+			
+			document.writeln('<td>' + bankAccountObjArr[i].accountNumber + '</td>');
+			document.writeln('<td>' + bankAccountObjArr[i].accountHolder + '</td>');
+			document.writeln('<td>' + bankAccountObjArr[i].accountBalance + '</td>');
+			document.writeln('<td>' + bankAccountObjArr[i].openingDate + '</td>');
+			
+			document.writeln('<td>');
+			
+				document.writeln('<table border=5 cellspacing=10 cellpading=10>');
+				
+				// start of table heading
+				
+				document.writeln('<tr>');
+				
+				document.writeln('<th>Area</th>');
+				document.writeln('<th>Street</th>');
+				document.writeln('<th>City</th>');
+				document.writeln('<th>State</th>');
+				document.writeln('<th>Country</th>');
+				document.writeln('<th>Pin code</th>');
+				
+				document.writeln('</tr>');
+				
+				// end of table heading
+				
+				// start of first row
+				
+				document.writeln('<tr>');
+				
+				document.writeln('<td>' + bankAccountObjArr[i].homeAddress.area + '</td>');
+				document.writeln('<td>' + bankAccountObjArr[i].homeAddress.street + '</td>');
+				document.writeln('<td>' + bankAccountObjArr[i].homeAddress.city + '</td>');
+				document.writeln('<td>' + bankAccountObjArr[i].homeAddress.state + '</td>');
+				document.writeln('<td>' + bankAccountObjArr[i].homeAddress.country + '</td>');
+				document.writeln('<td>' + bankAccountObjArr[i].homeAddress.pin + '</td>');
+				
+				document.writeln('</tr>');
+				
+				// end of first row
+				
+			document.writeln('</td>');
+				
+				
+			document.writeln('</tr>');
+			document.writeln('</table>');
+			// end of first row
+				
+		}
+			
+
+			
+		
+		
+		
+		
+		document.writeln('</table>');
+		
+		
+		
+	</script>
+    
+  </head>
+  <body>
+	
+	
+  </body>
+</html>

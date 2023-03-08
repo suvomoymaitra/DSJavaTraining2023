@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script>
+		
+		bidderArray = [
+			{
+				"bidderId" : "1",
+				"bidderName" : "Ram",
+				"bidderPhone" : "9876543210",
+				"bidderRating" : "4.5",
+				"bidderTransactions" : [
+					{
+						"transactionID" : "25",
+						"transactionAmount" : "10000",
+						"cropsBought" : "Wheat",
+						"farmerID" : "10",
+						"dateOfTransaction" : new Date("12 Aug 2021")
+					},
+					{
+						"transactionID" : "50",
+						"transactionAmount" : "20000",
+						"cropsBought" : "Coconut",
+						"farmerID" : "15",
+						"dateOfTransaction" : new Date("23 Mar 2022")
+					},
+					{
+						"transactionID" : "75",
+						"transactionAmount" : "10000",
+						"cropsBought" : "Wheat",
+						"farmerID" : "10",
+						"dateOfTransaction" : new Date("30 Apr 2022")
+					}
+				]
+			},
+			{
+				"bidderId" : "2",
+				"bidderName" : "Shyam",
+				"bidderPhone" : "7654321098",
+				"bidderRating" : "4.7",
+				"bidderTransactions" : [
+					{
+						"transactionID" : "30",
+						"transactionAmount" : "12000",
+						"cropsBought" : "Rice",
+						"farmerID" : "12",
+						"dateOfTransaction" : new Date("30 Aug 2021")
+					},
+					{
+						"transactionID" : "40",
+						"transactionAmount" : "25000",
+						"cropsBought" : "Wheat",
+						"farmerID" : "15",
+						"dateOfTransaction" : new Date("08 Mar 2022")
+					},
+					{
+						"transactionID" : "45",
+						"transactionAmount" : "17000",
+						"cropsBought" : "Bajra",
+						"farmerID" : "17",
+						"dateOfTransaction" : new Date("01 Apr 2022")
+					}
+				]
+			},
+			{
+				"bidderId" : "3",
+				"bidderName" : "Jodu",
+				"bidderPhone" : "6543210987",
+				"bidderRating" : "4",
+				"bidderTransactions" : [
+					{
+						"transactionID" : "26",
+						"transactionAmount" : "10500",
+						"cropsBought" : "Wheat",
+						"farmerID" : "10",
+						"dateOfTransaction" : new Date("31 Aug 2021")
+					},
+					{
+						"transactionID" : "51",
+						"transactionAmount" : "21000",
+						"cropsBought" : "Coconut",
+						"farmerID" : "15",
+						"dateOfTransaction" : new Date("13 Dec 2022")
+					},
+					{
+						"transactionID" : "76",
+						"transactionAmount" : "11000",
+						"cropsBought" : "Wheat",
+						"farmerID" : "10",
+						"dateOfTransaction" : new Date("30 Jun 2022")
+					}
+				]
+			}
+			
+		];	
+		
+		
+		
+		
+// html part
+		
+		document.writeln('<table border=5 cellspacing=10 cellpading=10>');
+		
+		// start of table heading
+		
+		document.writeln('<tr>');
+		
+		document.writeln('<th>Bidder ID</th>');
+		document.writeln('<th>Bidder Name</th>');
+		document.writeln('<th>Bidder phone</th>');
+		document.writeln('<th>Bidder Rating</th>');
+		document.writeln('<th>Transactions</th>');
+		
+		document.writeln('</tr>');
+		
+		// end of table heading
+		
+		for(let i=0;i<bidderArray.length;i++){
+		
+			// start of first row
+			
+			document.writeln('<tr>');
+			
+			document.writeln('<td>' + bidderArray[i].bidderId + '</td>');
+			document.writeln('<td>' + bidderArray[i].bidderName + '</td>');
+			document.writeln('<td>' + bidderArray[i].bidderPhone + '</td>');
+			document.writeln('<td>' + bidderArray[i].bidderRating + '</td>');
+			
+			document.writeln('<td>');
+			
+				document.writeln('<table border=5 cellspacing=10 cellpading=10>');
+				
+				// start of table heading
+				
+				document.writeln('<tr>');
+				
+				document.writeln('<th>Transaction ID</th>');
+				document.writeln('<th>Transaction amount</th>');
+				document.writeln('<th>Crops Bought</th>');
+				document.writeln('<th>Farmer ID</th>');
+				document.writeln('<th>Date of transaction</th>');
+				
+				document.writeln('</tr>');
+				
+				// end of table heading
+				
+				// start of first row
+				
+				console.log(bidderArray[i].bidderTransactions.length);
+				
+				for(let j = 0;j<bidderArray[i].bidderTransactions.length;j++){
+					document.writeln('<tr>');
+				
+					document.writeln('<td>' + bidderArray[i].bidderTransactions[j].transactionID + '</td>');
+					document.writeln('<td>' + bidderArray[i].bidderTransactions[j].transactionAmount + '</td>');
+					document.writeln('<td>' + bidderArray[i].bidderTransactions[j].cropsBought + '</td>');
+					document.writeln('<td>' + bidderArray[i].bidderTransactions[j].farmerID + '</td>');
+					document.writeln('<td>' + bidderArray[i].bidderTransactions[j].dateOfTransaction + '</td>');
+					
+					document.writeln('</tr>');
+				}
+				
+				// end of first row
+				
+			document.writeln('</td>');
+				
+				
+			document.writeln('</tr>');
+			document.writeln('</table>');
+			// end of first row
+				
+		}
+			
+
+			
+		
+		
+		
+		
+		document.writeln('</table>');
+		
+		
+		
+		
+		
+		
+		
+	
+	</script>
+
+</body>
+</html>
