@@ -1,0 +1,33 @@
+@charset "ISO-8859-1";
+
+h1{
+	background-color : black;
+	 color:white;
+}
+
+h2{
+	background-color : #befadb;
+	color : #fa7d7d;
+}
+h3{
+	background-color : cyan;
+	color : green;
+}
+
+body{
+	background-image: url("airplane.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+
+table{
+	background-color : #befaf5;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+a{	
+	background-color : black;
+	color : white;
+}
