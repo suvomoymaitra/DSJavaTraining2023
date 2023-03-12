@@ -12,9 +12,9 @@ import java.util.List;
 import com.ds.layer2.Employee;
 import com.ds.layer2.EmployeeDAO;
 
-public class EmployeeDAOImpl implements EmployeeDAO {
+public class EmployeeDAOImplSQL implements EmployeeDAO {
 	Connection conn;
-	public EmployeeDAOImpl() {
+	public EmployeeDAOImplSQL() {
 		// TODO Auto-generated constructor stub
 		try {
 			System.out.println("Trying to connect to database....");
