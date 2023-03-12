@@ -7,7 +7,7 @@ import com.ds.layer3.EmployeeDAOImpl;
 
 public class EmployeeServiceImpl implements EmployeeService {
 	
-	EmployeeDAOImpl empDao = new EmployeeDAOImpl();
+	EmployeeDAO empDao = new EmployeeDAOImplSQL();
 
 	public EmployeeServiceImpl() {
 		// TODO Auto-generated constructor stub
