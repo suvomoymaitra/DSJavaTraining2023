@@ -22,6 +22,8 @@ public class EmployeeDAOImplFile implements EmployeeDAO {
 
 	public EmployeeDAOImplFile(String location, String name) {
 		// TODO Auto-generated constructor stub
+		this.location = location;
+		this.name = name;
 		
 	}
 	
